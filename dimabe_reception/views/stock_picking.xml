@@ -59,6 +59,7 @@
               <field name="carrier_cell_phone"/>
               <field name="truck_id"/>
               <field name="cart_id"/>
+              <field name="cart_id"/>
          </group>
         
      <!--  -->
