@@ -11,6 +11,7 @@
     'description': """
         Long description of module's purpose
     """,
+
     'author': "Dimabe ltda.",
     'website': "http://www.dimabe.cl",
 
