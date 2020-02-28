@@ -463,7 +463,7 @@
                 <span t-field="stock_picking.carrier_cell_phone"/>
               </td>
             </tr>
-           <tr>
+            <tr>
               <th style="border-right:1px solid;border-bottom:1px solid;">PATENTE CAMIÓN:</th>
               <td style="border-bottom:1px solid;">
                 <span t-field="stock_picking.carrier_truck_patent"/>
@@ -474,7 +474,7 @@
               <td style="border-bottom:1px solid;">
                 <span t-field="stock_picking.carrier_cart_patent"/>
               </td>
-            </tr> 
+            </tr>
           </table>
           <table style="width: 100%; text-align:center;margin-top:150px;">
             <tr>

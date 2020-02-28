@@ -1,5 +1,6 @@
 from odoo import fields, models, api
 
+
 class PurchaseRequisition(models.Model):
     _inherit = 'purchase.requisition'
 
@@ -24,7 +25,6 @@ class PurchaseRequisition(models.Model):
         template_id = self.env.ref('dimabe_purchase_process.budget_ready_mail_template')
         self.message_post_with_template(template_id.id)
         return res
-
 
     @api.model
     def get_email_to(self, ref_id):

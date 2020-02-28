@@ -1,5 +1,5 @@
 <odoo>
-  <data>  
+  <data>
     <record id="stock_picking_form_inherit" model="ir.ui.view">
       <field name="name">Export Page</field>
       <field name="model">stock.picking</field>
@@ -51,29 +51,21 @@
                  attrs="{'invisible':[('is_mp_reception', '=', False)]}"
           />
         </field>
-
-
-      
-        <xpath expr="//page[@name='note']" position="after"> <!-- after   note-->
-           <page string="Transportista" name="carrier_page" attrsgit="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">  
-            <group name="carrier_page" position="inside">  <!-- inside -->
+        <xpath expr="//page[@name='note']" position="after"> 
+          <page string="Transportista" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
+            <group name="carrier_page" position="inside">
               <field name="carrier_id"/>
               <field name="carrier_rut"/>
-              <field name="carrier_cell_phone"/>   
-              <field name="truck_id"/> 
-              <field name="cart_id" context = "{'default_is_truck': False}"/>
+              <field name="carrier_cell_phone"/>
+              <field name="truck_id"/>
+              <field name="cart_id"/>
          </group>
-          </page> 
-         </xpath>
-  
-        <!-- 
+         
 
-         <xpath expr="//page[@name='note']" position='after'>
-          <page string='Pestaña extra'>
+     <!--  -->
+     
           </page>
-        </xpath>
-        Esto sirve para agregar una pestaña extra
-      -->
+         </xpath>  
       </field>
     </record>
 

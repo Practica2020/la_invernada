@@ -1,6 +1,7 @@
 from odoo import models, api, fields
 from datetime import datetime, timedelta
 
+
 class StockPicking(models.Model):
     _inherit = 'stock.picking'
 
@@ -66,43 +67,38 @@ class StockPicking(models.Model):
 
     quality_weight = fields.Float('Kilos Calidad')
 
-
     carrier_rut = fields.Char(
         'Rut',
         related='carrier_id.rut'
     )
 
     carrier_cell_phone = fields.Char(
-        'Celular', #este es el nombre que se ve en la pestaña
+        'Celular',
         related='carrier_id.cell_number'
     )
 
-    
-#    carrier_truck_patent = fields.Char(
-#        'Patente Camión',
-#        related='carrier_id.truck_patent'
+   # carrier_truck_patent = fields.Char(
+   #     'Patente Camión',
+   #     related='carrier_id.truck_patent'
    # )
-#
+
    # carrier_cart_patent = fields.Char(
    #     'Patente Carro',
-  #      related='carrier_id.cart_patent'
- #   )
+   #     related='carrier_id.cart_patent'
+   # )
 
     truck_id = fields.Many2one(
-        'custom.transport', #nombre del modelo
-        'Patente de camión', #nombre de la etiqueta
-        domain=[('is_truck', '=', True)], #True es lo que fue originalmente  
+        'custom.transport',
+        'Patente de camión',
+         domain=[('is_truck', '=', False)] #True
      )
-
 
     cart_id = fields.Many2one(
         'custom.transport',
         'Patente de carro',
-        domain=[('is_truck', '=', False)], #False es lo que fue originalmente 
+        domain=[('is_truck', '=', True)] #False
      )
 
-
-#
   #  transport_patent = fields.Char(
   #      'Patente',
   #       related='transport_id.patent'
@@ -111,8 +107,8 @@ class StockPicking(models.Model):
   #  transport_is_truck = fields.Boolean(
   #      'Es camión?',
   #       related='transport_id.is_truck'
- #        )
-#
+  #       )
+
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
 
     kg_diff_alert_notification_count = fields.Integer('Conteo de notificación de diferencia de kg')
@@ -129,8 +125,6 @@ class StockPicking(models.Model):
         default=datetime.now().year
     )
 
-
-
     @api.one
     @api.depends('tare_weight', 'gross_weight', 'move_ids_without_package', 'quality_weight')
     def _compute_net_weight(self):
@@ -138,7 +132,6 @@ class StockPicking(models.Model):
         if self.is_mp_reception:
             if self.canning_weight:
                 self.net_weight = self.net_weight - self.canning_weight
-                
     @api.one
     @api.depends('move_ids_without_package')
     def _compute_weight_guide(self):

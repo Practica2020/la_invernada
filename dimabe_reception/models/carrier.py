@@ -15,9 +15,11 @@ class Carrier(models.Model):
         required=True
     )
 
-    cell_number = fields.Char('Número de celular') #este es el campo que se ve dentro de la ventana para ingresar el dato
+    cell_number = fields.Char('Número de celular')
 
+  #  truck_patent = fields.Char('Patente Camión')
     
+  #  cart_patent = fields.Char('Patente Carro')
 
     @api.model
     def create(self, values_list):
