@@ -55,7 +55,7 @@
 
       
         <xpath expr="//page[@name='note']" position="after"> <!-- after   note-->
-           <page string="Transportista de ese mismo" name="carrier_page" attrsgit="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">  
+           <page string="Transportista" name="carrier_page" attrsgit="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">  
             <group name="carrier_page" position="inside">  <!-- inside -->
               <field name="carrier_id"/>
               <field name="carrier_rut"/>
