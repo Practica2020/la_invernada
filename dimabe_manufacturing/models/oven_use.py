@@ -48,12 +48,22 @@ class OvenUse(models.Model):
             item.active_time = date_helper.int_to_time(item.active_seconds)
 
     @api.multi
+    def unlink(self):
+
+        self.mapped('dried_oven_id').write({
+            'is_in_use': False
+        })
+        return super(OvenUse, self).unlink()
+
+    @api.multi
     def init_process(self):
         for item in self:
             if item.init_date:
                 raise models.ValidationError('este proceso ya ha sido iniciado')
             if not item.dried_oven_id:
                 raise models.ValidationError('Debe seleccionar el horno a iniciar')
+            if not item.used_lot_ids:
+                raise models.ValidationError('Debe Seleccionar al menos un lote a secar')
             item.init_date = datetime.utcnow()
             item.init_active_time = item.init_date.timestamp()
             item.unpelled_dried_id.state = 'progress'

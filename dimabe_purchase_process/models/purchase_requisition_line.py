@@ -8,12 +8,12 @@ class PurchaseRequisitionLine(models.Model):
     account_analytic_id = fields.Many2one(
         'account.analytic.account',
         string='Analytic Account',
-        required=False
+        required=True
     )
 
     price_unit = fields.Float(
         string='Unit Price',
         digits=dp.get_precision('Product Price'),
-        required=False,
+        required=True,
         default=None
     )

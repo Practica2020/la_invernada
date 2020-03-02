@@ -33,7 +33,7 @@ class UnpelledDried(models.Model):
 
     in_lot_ids = fields.Many2many(
         'stock.production.lot',
-        related='oven_use_ids.mapped(used_lot_ids)',
+        compute='_compute_in_lot_ids',
         string='Lotes de Entrada'
     )
 
@@ -66,10 +66,49 @@ class UnpelledDried(models.Model):
         'Hornos'
     )
 
+    total_in_weight = fields.Float(
+        'Total Ingresado',
+        compute='_compute_total_in_weight'
+    )
+
+    total_out_weight = fields.Float(
+        'Total Secaco',
+        compute='_compute_total_out_weight'
+    )
+
+    performance = fields.Float(
+        'Rendimiento',
+        compute='_compute_performance'
+    )
+
+    @api.multi
+    def _compute_performance(self):
+        for item in self:
+            if item.total_in_weight > 0 and item.total_out_weight > 0:
+                item.performance = (item.total_out_weight / item.total_in_weight) * 100
+
+    @api.multi
+    def _compute_total_out_weight(self):
+        for item in self:
+            item.total_out_weight = sum(item.out_serial_ids.mapped('display_weight'))
+
+    @api.multi
+    def _compute_total_in_weight(self):
+        for item in self:
+            item.total_in_weight = sum(item.oven_use_ids.filtered(
+                lambda a: a.finish_date
+            ).mapped('used_lot_ids').mapped('balance'))
+
+    @api.multi
+    def _compute_in_lot_ids(self):
+        for item in self:
+            item.in_lot_ids = item.oven_use_ids.mapped('used_lot_ids')
+
     @api.onchange('producer_id')
     def onchange_producer_id(self):
         if self.producer_id not in self.in_lot_ids.mapped('producer_id'):
-            self.in_lot_ids = [(5,)]
+            for oven_use_id in self.oven_use_ids:
+                oven_use_id.used_lot_ids = [(5,)]
 
     @api.onchange('product_in_id')
     def onchange_product_in_id(self):
@@ -89,7 +128,7 @@ class UnpelledDried(models.Model):
     @api.multi
     def _compute_name(self):
         for item in self:
-            item.name = item.out_lot_id.name
+            item.name = '{} {}'.format(item.producer_id.name, item.out_lot_id.product_id.name)
 
     @api.model
     def create(self, values_list):
@@ -118,5 +157,9 @@ class UnpelledDried(models.Model):
     @api.multi
     def finish_unpelled_dried(self):
         for item in self:
+            if not item.out_serial_ids:
+                raise models.ValidationError('Debe agregar al menos una serie de salida al proceso')
+
             item.state = 'done'
+
             item.oven_use_ids.mapped('dried_ove_id').set_is_in_use(False)
