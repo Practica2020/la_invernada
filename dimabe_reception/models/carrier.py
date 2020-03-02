@@ -1,6 +1,4 @@
 from odoo import models, fields, api
-
-
 class Carrier(models.Model):
 
     _name = 'custom.carrier'
@@ -15,11 +13,7 @@ class Carrier(models.Model):
         required=True
     )
 
-    cell_number = fields.Char('Número de celular')
-
-  #  truck_patent = fields.Char('Patente Camión')
-    
-  #  cart_patent = fields.Char('Patente Carro')
+    cell_number = fields.Char('Celular')
 
     @api.model
     def create(self, values_list):
@@ -32,8 +26,8 @@ class Carrier(models.Model):
         return super(Carrier, self).write(vals)
 
     def _prepare_data(self, values_list):
-   #     if 'truck_patent' in values_list:
-   #         values_list['truck_patent'] = str.upper(values_list['truck_patent'])
-   #     if 'cart_patent' in values_list:
-   #        values_list['cart_patent'] = str.upper(values_list['cart_patent'])
+        if 'truck_patent' in values_list:
+            values_list['truck_patent'] = str.upper(values_list['truck_patent'])
+        if 'cart_patent' in values_list:
+            values_list['cart_patent'] = str.upper(values_list['cart_patent'])
         return values_list
