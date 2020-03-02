@@ -1,6 +1,5 @@
 from odoo import fields, models, api
 
-
 class Transport(models.Model):
     _name = 'transport'
     _description = 'patente de camión o carro'
