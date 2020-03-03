@@ -5,7 +5,7 @@ class Transport(models.Model):
     _name = 'transport'
     _description = 'patente de camión o carro'
 
-    is_truck = fields.Boolean('Patente de Camión', default=True)
+    is_truck = fields.Boolean('Patente de Camión')
 
     name = fields.Char('Patente')
 
