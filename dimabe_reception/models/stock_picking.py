@@ -48,7 +48,7 @@ class StockPicking(models.Model):
         store=True
     )
 
-    carrier_id = fields.Many2one('custom.carrier', 'Conductor')
+    
 
     truck_in_date = fields.Datetime(
         'Entrada de Camión',
@@ -66,6 +66,8 @@ class StockPicking(models.Model):
     )
 
     quality_weight = fields.Float('Kilos Calidad')
+
+    carrier_id = fields.Many2one('custom.carrier', 'Conductor')
 
     carrier_rut = fields.Char(
         'Rut',
@@ -101,6 +103,7 @@ class StockPicking(models.Model):
         domain=[('is_truck', '=', False)]
 
     )
+
 
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
 
