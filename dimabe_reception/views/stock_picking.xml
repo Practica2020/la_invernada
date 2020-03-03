@@ -59,7 +59,7 @@
               <field name="carrier_rut"/>
               <field name="carrier_cell_phone"/>
               <field name="truck_id" context="{'default_is_truck': True }"/>
-              <field name="cart_id" context="{'default_is_truck': True }"/>
+              <field name="cart_id" context="{'default_is_truck': False }"/>
             </group>
           </page>
         </xpath>
