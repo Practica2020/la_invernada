@@ -49,11 +49,11 @@
                  attrs="{'invisible':[('is_mp_reception', '=', False)]}"
           />
           <field name="avg_unitary_weight"
-                 attrs="{'invisible':[('is_mp_reception', '=', False)]}"
-          />
-        </field>
+                 attrs="{'invisible':[('is_mp_reception', '=', False)]}"  />
+        
+                </field>
         <xpath expr="//page[@name='note']" position="after">
-          <page string="Transportista de esos mismos" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
+          <page string="Transportista" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
             <group name="carrier_page" position="inside">
               <field name="carrier_id"/>
               <field name="carrier_rut"/>
