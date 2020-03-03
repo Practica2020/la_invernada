@@ -4,6 +4,12 @@ from odoo import fields, models, api
 class StockProductionLot(models.Model):
     _inherit = 'stock.production.lot'
 
+    producer_id = fields.Many2one(
+        'res.partner',
+        compute='_compute_producer_id',
+        search='_search_producer_id'
+    )
+
     is_prd_lot = fields.Boolean('Es Lote de salida de Proceso')
 
     is_standard_weight = fields.Boolean('Series Peso Estandar')
