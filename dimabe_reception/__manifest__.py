@@ -45,7 +45,7 @@
         'data/reception_notification_mail_template.xml',
         'views/stock_warehouse.xml',
         'views/product_category.xml',
-        'views/transport.xml'
+        'views/custom_transport.xml'
     ],
     # only loaded in demonstration mode
     'demo': [

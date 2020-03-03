@@ -9,4 +9,3 @@ class CustomPort(models.Model):
     code = fields.Char(string='Código', required=True)
 
     country_id = fields.Many2one(comodel_name='res.country', string='País')
-
