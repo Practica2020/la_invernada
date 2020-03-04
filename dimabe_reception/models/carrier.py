@@ -4,6 +4,12 @@ class Carrier(models.Model):
     _name = 'custom.carrier'
 
 
+    
+    carrier_id = fields.One2many(
+        string='Conductor',
+        comodel_name='res.partner'
+    )
+    
 
 #    name = fields.Char(
 #        'Conductor',
@@ -15,7 +21,7 @@ class Carrier(models.Model):
 #        required=True
 #    )
 
-    cell_number = fields.Char('Celular')
+#    cell_number = fields.Char('Celular')
 
     @api.model
     def create(self, values_list):
