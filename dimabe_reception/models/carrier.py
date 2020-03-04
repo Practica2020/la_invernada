@@ -2,16 +2,16 @@ from odoo import models, fields, api
 class Carrier(models.Model):
 
     _name = 'custom.carrier'
-
-
+    
     
     carrier_id = fields.Many2one(
         string='Conductor',
         comodel_name='res.partner'
     )
 
-    truck_patent = fields.Char('Patente de camión')
+#    truck_patent = fields.Char('Patente de camión')
 
+#    cart_patent = fields.Char('Patente de carro')
 
     @api.model
     def create(self, values_list):
