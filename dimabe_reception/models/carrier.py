@@ -11,9 +11,6 @@ class Carrier(models.Model):
     )
 
 
-    
-    
-
 #    name = fields.Char(
 #        'Conductor',
 #        required=True

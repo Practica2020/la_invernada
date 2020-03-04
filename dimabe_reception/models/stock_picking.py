@@ -72,7 +72,6 @@ class StockPicking(models.Model):
 #        'Patente Camión',
 #        related='carrier_id.truck_patent'
 #    )
-
  #   carrier_cart_patent = fields.Char(
  #       'Patente Carro',
  #       related='cart_id.name'
