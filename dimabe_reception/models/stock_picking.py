@@ -71,7 +71,7 @@ class StockPicking(models.Model):
 #        'Rut',
 #        related='carrier_id.rut'
 #    )
-
+#
 #    carrier_cell_phone = fields.Char(
 #        'Celular',
 #        related='carrier_id.cell_number'
