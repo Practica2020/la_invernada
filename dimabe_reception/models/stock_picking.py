@@ -74,10 +74,10 @@ class StockPicking(models.Model):
 #        related='carrier_id.truck_patent'
 #    )
 
-    carrier_cart_patent = fields.Char(
-        'Patente Carro',
-        related='cart_id.name'
-    )
+ #   carrier_cart_patent = fields.Char(
+ #       'Patente Carro',
+ #       related='cart_id.name'
+ #   )
 
     truck_id = fields.Many2one(
         'transport',
