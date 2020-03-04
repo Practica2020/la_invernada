@@ -10,10 +10,7 @@ class Carrier(models.Model):
         comodel_name='res.partner'
     )
 
-    
-    truck_patent = fields.Char(
-        string='Patente  de carro'
-    )
+
     
     
 

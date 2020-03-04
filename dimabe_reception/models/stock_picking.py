@@ -67,20 +67,12 @@ class StockPicking(models.Model):
 
     quality_weight = fields.Float('Kilos Calidad')
 
-#    carrier_rut = fields.Char(
-#        'Rut',
-#        related='carrier_id.rut'
-#    )
-#
-#    carrier_cell_phone = fields.Char(
-#        'Celular',
-#        related='carrier_id.cell_number'
-#    )
 
-    carrier_truck_patent = fields.Char(
-        'Patente Camión',
-        related='carrier_id.truck_patent'
-    )
+
+#    carrier_truck_patent = fields.Char(
+#        'Patente Camión',
+#        related='carrier_id.truck_patent'
+#    )
 
     carrier_cart_patent = fields.Char(
         'Patente Carro',
