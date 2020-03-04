@@ -10,7 +10,7 @@ class Carrier(models.Model):
         comodel_name='res.partner'
     )
 
-    truck_patent = fields.Char('Patente de camión')
+    #truck_patent = fields.Char('Patente de camión')
 
 
     @api.model
