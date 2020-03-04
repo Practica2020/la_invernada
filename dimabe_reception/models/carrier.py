@@ -5,7 +5,7 @@ class Carrier(models.Model):
 
 
     
-    carrier_id = fields.One2many(
+    carrier_id = fields.Many2one(
         string='Conductor',
         comodel_name='res.partner'
     )
