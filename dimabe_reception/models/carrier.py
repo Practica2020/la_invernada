@@ -10,18 +10,8 @@ class Carrier(models.Model):
         comodel_name='res.partner'
     )
 
+    carrier_truck_patent = fields.Char('Patente de camión')
 
-#    name = fields.Char(
-#        'Conductor',
-#        required=True
-#    )
-
-#    rut = fields.Char(
-#        'Rut',
-#        required=True
-#    )
-
-#    cell_number = fields.Char('Celular')
 
     @api.model
     def create(self, values_list):
