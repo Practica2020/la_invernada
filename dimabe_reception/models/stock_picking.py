@@ -92,7 +92,7 @@ class StockPicking(models.Model):
 #        context={'default_is_truck': False},
 #        domain=[('is_truck', '=', False)]
 
-    )
+ #   )
 
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
 
