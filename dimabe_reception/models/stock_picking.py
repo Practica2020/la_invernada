@@ -70,27 +70,27 @@ class StockPicking(models.Model):
 
     carrier_truck_patent = fields.Char(
         'Patente Camión',
-        related='res.partner.truck_patent'
+        related='truck_id.name'
     )
 
- #   carrier_cart_patent = fields.Char(
- #       'Patente Carro',
- #       related='cart_id.name'
- #   )
+    carrier_cart_patent = fields.Char(
+        'Patente Carro',
+        related='cart_id.name'
+    )
 
-#    truck_id = fields.Many2one(
-#        'transport',
-#        'Patente Camión',
-#        context={'default_is_truck': True},
-#        domain=[('is_truck', '=', True)]
-#    )
+    truck_id = fields.Many2one(
+        'transport',
+        'Patente Camión',
+        context={'default_is_truck': True},
+        domain=[('is_truck', '=', True)]
+    )
 
-#    cart_id = fields.Many2one(
-#        'transport',
-#        'Patente Carro',
-#        context={'default_is_truck': False},
-#        domain=[('is_truck', '=', False)] 
- #   )
+    cart_id = fields.Many2one(
+        'transport',
+        'Patente Carro',
+        context={'default_is_truck': False},
+        domain=[('is_truck', '=', False)] 
+    )
 
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
 

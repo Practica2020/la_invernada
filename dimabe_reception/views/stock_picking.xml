@@ -56,14 +56,10 @@
           <page string="Transportista" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
             <group name="carrier_page" position="inside">
               <field name="carrier_id"/>
-           <!--     <field name="carrier_truck_patent"/>
-            
-             <field name="carrier_rut"/>
-              <field name="carrier_cell_phone"/>
            
               <field name="truck_id" context="{'default_is_truck': True }"/>
               <field name="cart_id" context="{'default_is_truck': False }"/>
-              -->
+              
             </group>
           </page>
         </xpath>
