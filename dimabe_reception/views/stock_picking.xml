@@ -57,7 +57,8 @@
             <group name="carrier_page" position="inside">
               <field name="carrier_id"/> 
               <field name="truck_id" context="{'default_is_truck': True }"/>
-              <field name="cart_id" context="{'default_is_truck': False }"/>           
+              <field name="cart_id" context="{'default_is_truck': False }"/>   
+              <field name="truck_patent"/>        
             </group>
           </page>
         </xpath>
