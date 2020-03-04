@@ -11,7 +11,7 @@ class Carrier(models.Model):
 
     truck_patent = fields.Char('Patente de camión')
 
-#    cart_patent = fields.Char('Patente de carro')
+#   cart_patent = fields.Char('Patente de carro')
 
     @api.model
     def create(self, values_list):
