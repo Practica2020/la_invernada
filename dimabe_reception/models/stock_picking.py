@@ -67,7 +67,7 @@ class StockPicking(models.Model):
 
     quality_weight = fields.Float('Kilos Calidad')
 
-    lol = fields.Char('Patente de camión', related='carrier_id')
+   # lol = fields.Char('Patente de camión', related='carrier_id')
 
 #el problema tal vez este aqui
 #    carrier_truck_patent = fields.Char(
