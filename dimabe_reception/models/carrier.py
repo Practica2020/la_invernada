@@ -3,15 +3,17 @@ class Carrier(models.Model):
 
     _name = 'custom.carrier'
 
-    name = fields.Char(
-        'Conductor',
-        required=True
-    )
 
-    rut = fields.Char(
-        'Rut',
-        required=True
-    )
+
+#    name = fields.Char(
+#        'Conductor',
+#        required=True
+#    )
+
+#    rut = fields.Char(
+#        'Rut',
+#        required=True
+#    )
 
     cell_number = fields.Char('Celular')
 
