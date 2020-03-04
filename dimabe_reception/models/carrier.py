@@ -9,6 +9,12 @@ class Carrier(models.Model):
         string='Conductor',
         comodel_name='res.partner'
     )
+
+    
+    truck_patent = fields.Char(
+        string='Patente  de carro'
+    )
+    
     
 
 #    name = fields.Char(
