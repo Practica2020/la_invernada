@@ -68,7 +68,6 @@ class StockPicking(models.Model):
     quality_weight = fields.Float('Kilos Calidad')
 
 
-
 #    carrier_truck_patent = fields.Char(
 #        'Patente Camión',
 #        related='carrier_id.truck_patent'
@@ -90,8 +89,7 @@ class StockPicking(models.Model):
 #        'transport',
 #        'Patente Carro',
 #        context={'default_is_truck': False},
-#        domain=[('is_truck', '=', False)]
-
+#        domain=[('is_truck', '=', False)] 
  #   )
 
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
