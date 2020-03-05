@@ -25,8 +25,7 @@
         'sale_management',
         'contacts',
         'account',
-        'stock',
-        'sale_stock'
+        'stock'
     ],
 
     # always loaded
