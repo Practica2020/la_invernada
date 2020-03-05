@@ -33,7 +33,10 @@ class Carrier(models.Model):
         return values_list
 
 
+    name = fields.Char(compute='_compute_name')
+
     @api.multi
     def _compute_name(self):
         for item in self:
             item.name=item.truck_patent
+
