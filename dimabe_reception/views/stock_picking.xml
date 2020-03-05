@@ -64,6 +64,7 @@
       </field>
     </record>
 
+    
     <record id="stock_picking_list" model="ir.ui.view">
       <field name="name">stock picking list</field>
       <field name="model">stock.picking</field>
