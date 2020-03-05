@@ -79,7 +79,6 @@ class StockPicking(models.Model):
     )
 
 
-
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
 
     kg_diff_alert_notification_count = fields.Integer('Conteo de notificación de diferencia de kg')
