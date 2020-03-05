@@ -13,6 +13,7 @@ class Carrier(models.Model):
 
     cart_patent = fields.Char('Patente de carro')
 
+    name = fields.Char(compute='_compute_name')
 
 
     @api.model
@@ -31,3 +32,9 @@ class Carrier(models.Model):
         if 'cart_patent' in values_list:
             values_list['cart_patent'] = str.upper(values_list['cart_patent'])
         return values_list
+
+
+    @api.multi
+    def _compute_name(self):
+        for item in self:
+            item.name=item.truck_patent

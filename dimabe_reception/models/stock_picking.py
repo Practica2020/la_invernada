@@ -71,12 +71,20 @@ class StockPicking(models.Model):
 
 
     carrier_truck_patent = fields.Char(
-        'Patente de camión',
+        'Patente de camión'
     )
 
     carrier_cart_patent = fields.Char(
-         'Patente de carro',
+         'Patente de carro'
     )
+
+
+ 
+
+    @api.mulit
+    def compute_truck_patent(self):
+        self.price_total = self.quantity * self.price
+    
 
 
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
