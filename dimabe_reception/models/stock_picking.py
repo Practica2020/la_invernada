@@ -83,10 +83,6 @@ class StockPicking(models.Model):
         'Patente de camión', #nombre de la etiqueta
          related='carrier_id.truck_patent'    
      )
-
-    @api.mulit
-    def compute_truck_patent(self):
-        self.price_total = self.quantity * self.price
     
 
 
