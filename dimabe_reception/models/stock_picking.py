@@ -70,15 +70,12 @@ class StockPicking(models.Model):
     quality_weight = fields.Float('Kilos Calidad')
 
 
-#el problema tal vez esta aqui
     carrier_truck_patent = fields.Char(
         'Patente de camión',
-      #  related='partner_id.truck_patent'
     )
 
     carrier_cart_patent = fields.Char(
          'Patente de carro',
-     #   related='partner_id.cart_patent'
     )
 
 
