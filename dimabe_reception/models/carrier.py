@@ -4,10 +4,10 @@ class Carrier(models.Model):
     _name = 'custom.carrier'
 
     
-   # carrier_id = fields.Many2one(
-   #     string='Conductor',
-   #     comodel_name='res.partner'
-   # )
+    carrier_id = fields.Many2one(
+        string='Conductor',
+        comodel_name='custom.carrier'
+    )
 
     truck_patent = fields.Many2one(string='Patente de camión', comodel_name='custom.carrier')
 

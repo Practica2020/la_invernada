@@ -48,7 +48,7 @@ class StockPicking(models.Model):
         store=True
     )
 
-    carrier_id = fields.Many2one('custom.transport', 'Conductor')
+    carrier_id = fields.Many2one('custom.carrier', 'Conductor')
 
 
 
