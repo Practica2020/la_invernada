@@ -78,11 +78,6 @@ class StockPicking(models.Model):
          'Patente de carro'
     )
 
-    truck_id = fields.One2many(
-        'custom.carrier', #nombre del modelo
-        'Patente de camión', #nombre de la etiqueta
-         related='carrier_id.truck_patent'    
-     )
     
 
 

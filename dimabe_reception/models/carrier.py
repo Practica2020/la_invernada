@@ -14,7 +14,6 @@ class Carrier(models.Model):
     cart_patent = fields.Char('Patente de carro')
 
 
-
     @api.model
     def create(self, values_list):
         values_list = self._prepare_data(values_list)
