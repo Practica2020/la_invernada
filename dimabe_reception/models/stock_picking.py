@@ -50,6 +50,8 @@ class StockPicking(models.Model):
 
     carrier_id = fields.Many2one('res.partner', 'Conductor')
 
+
+
     truck_in_date = fields.Datetime(
         'Entrada de Camión',
         readonly=True
@@ -69,10 +71,10 @@ class StockPicking(models.Model):
 
 
 #el problema tal vez esta aqui
-#    carrier_truck_patent = fields.Char(
-#        'Patente Camión',
-#        related='carrier_id.truck_patent'
-#    )
+    carrier_truck_patent = fields.Char(
+        'Patente Camión',
+        related='carrier_id.truck_patent'
+    )
 
 #   carrier_cart_patent = fields.Char(
 #      'Patente Carro',
