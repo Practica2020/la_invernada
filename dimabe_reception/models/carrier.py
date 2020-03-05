@@ -9,9 +9,9 @@ class Carrier(models.Model):
         comodel_name='res.partner'
     )
 
-    truck_patent = fields.Char('Patente de camión')
+    truck_patent = fields.Many2one(string='Patente de camión', comodel_name='custom.carrier')
 
-    cart_patent = fields.Char('Patente de carro')
+   # cart_patent = fields.Char('Patente de carro')
 
 
 
