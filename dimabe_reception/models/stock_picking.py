@@ -82,6 +82,7 @@ class StockPicking(models.Model):
     truck_id = fields.Many2one(
         'custom.carrier', #nombre del modelo
         'Patente de camión', #nombre de la etiqueta
+        related='truck_patent'    
      )
 
     @api.mulit
