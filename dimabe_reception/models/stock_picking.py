@@ -78,7 +78,6 @@ class StockPicking(models.Model):
          'Patente de carro'
     )
 
-
     truck_id = fields.Many2one(
         'custom.carrier', #nombre del modelo
         'Patente de camión', #nombre de la etiqueta
