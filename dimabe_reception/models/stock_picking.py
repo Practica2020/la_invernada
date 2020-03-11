@@ -50,6 +50,8 @@ class StockPicking(models.Model):
 
     carrier_id = fields.Many2one('res.partner', 'Conductor')
 
+
+
     truck_in_date = fields.Datetime(
         'Entrada de Camión',
         readonly=True
