@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # noinspection PyStatementEffect
 {
-    'name': "My library",
+    'name': "My other library",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
