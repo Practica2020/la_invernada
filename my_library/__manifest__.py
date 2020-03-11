@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "Mi libreria",  # Module title
+    'name': "My Library",  # Module title
     'summary': "Manage books easily",  # Module subtitle phrase
     'description': """Long description""",  # You can also rst format
     'author': "Parth Gajjar",
     'website': "http://www.example.com",
     'category': 'Uncategorized',
     'version': '12.0.1',
-    'depends': ['base' ,'website'],
+    'depends': ['base', 'website'],
     # This data files will be loaded at the installation (commented becaues file is not added in this example)
     'data': [
         'security/groups.xml',
