@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # noinspection PyStatementEffect
 {
-    'name': "My Library",
+    'name': "My library",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -31,11 +31,24 @@
 
     # always loaded
     'data': [
-
+        'security/ir.model.access.csv',
+        'views/views.xml',
+        'views/stock_picking.xml',
+        'views/res_partner.xml',
+        'views/res_company.xml',
+        'views/stock_move.xml',
+        'views/templates.xml',
+        'views/custom_carrier.xml',
+        'views/reception_alert_config.xml',
+        'reports/reception_label_report.xml',
+        'data/alert_config_data.xml',
+        'data/reception_notification_mail_template.xml',
+        'views/stock_warehouse.xml',
+        'views/product_category.xml'
      
     ],
     # only loaded in demonstration mode
     'demo': [
-      
+        'demo/demo.xml',
     ],
 }
