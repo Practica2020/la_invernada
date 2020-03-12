@@ -76,6 +76,8 @@
                <field name="medical_certification"/> 
                <field name="imagen" 
                widget="image"
+
+               options="{'preview_image': 'image_small', 'size': [60, 60]}"
                />
 
             </group>
