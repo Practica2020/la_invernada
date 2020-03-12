@@ -9,7 +9,7 @@
        
 
         <xpath expr="//page[@name='note']" position="after">
-          <page string="Transportista" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
+          <page string="Condición médica" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
             <group name="carrier_page" position="inside">
               
               <field name="carrier_id" />       
