@@ -6,6 +6,7 @@ class dimabe_health_care(models.Model):
 
     
      most_severe_condition = fields.Char()
+     
      emergency_contact = emergency_contact = fields.Many2one(
          string='emergency_contact',         
          comodel_name='res.partner'
