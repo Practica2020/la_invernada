@@ -7,17 +7,7 @@
       <field name="arch" type="xml">
 
 
-        <xpath expr="//page[@name='note']" position="after">
-          <page string="Transportista" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
-            <group name="carrier_page" position="inside">
-              
-              <field name="dimabe_health_care_disease" />       
-              <field name="dimabe_health_care_description"/> 
-               <field name="dimabe_health_care_emergency_contact"/> 
 
-            </group>
-          </page>
-        </xpath>
       </field>
     </record>
 
