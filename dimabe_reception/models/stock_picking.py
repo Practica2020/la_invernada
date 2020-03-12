@@ -77,7 +77,7 @@ class StockPicking(models.Model):
     )
 
 
-    medical_condition_id = fields.Many2one('medical_condition', 'Condición médica')
+    medical_condition_id = fields.One2many('medical_condition', 'Condición médica')
 
     medical_condition_most_severe_disease = fields.Char('Condición más severa')
 
