@@ -6,10 +6,11 @@ class dimabe_health_care(models.Model):
      _name = 'dimabe_health_care.dimabe_health_care'
 
      name = fields.Char()
-     value = fields.Integer()
-     value2 = fields.Float(compute="_value_pc", store=True)
+     most_severe_condition = fields.Char()
+     emergency_contact = emergency_contact = fields.Many2one(
+         string='emergency_contact',         
+         comodel_name='res.partner'
+         
+     )
+   
      description = fields.Text()
-
-     @api.depends('value')
-     def _value_pc(self):
-         self.value2 = float(self.value) / 100
