@@ -1,5 +1,6 @@
 <odoo>
   <data>
+    <!--
     <record id="stock_picking_form_inherit" model="ir.ui.view">
       <field name="name">Export Page</field>
       <field name="model">dimabe_health_care</field>
@@ -8,5 +9,6 @@
 
       </field>
     </record>
+  -->
   </data>
 </odoo>
