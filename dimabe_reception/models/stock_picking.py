@@ -77,7 +77,7 @@ class StockPicking(models.Model):
     )
 
 
-    dimabe_health_care_id = fields.Many2one('dimabe_health_care', 'Condición médica')
+    dimabe_health_care_id = fields.Many2one('dimabe_health_care_id', 'Contacto de emergencia')
 
     medical_condition_most_severe_disease = fields.Char('Condición más severa')
 
