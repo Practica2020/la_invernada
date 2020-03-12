@@ -3,23 +3,15 @@ from odoo import models, api, fields
 
 class HealthStockPicking(models.Model):
     _inherit = 'stock.picking'
-    _order = 'date desc'
 
-    
 
-  #  carrier_id = fields.Many2one('res.partner', 'Conductor')
+    dimabe_health_care_id = fields.Many2one('dimabe.health.care', 'Cuidado')
 
-  #  truck_in_date = fields.Datetime(
-  #      'Entrada de Camión',
-  #      readonly=True
-  #  )
+    dimabe_health_care_disease = fields.Char('Enfermedad más grave')
 
-   
+    dimabe_health_care_emergency_contact =  fields.Many2one(
+        string='dimabe_health_care_emergency_contact',
+        comodel_name='dimabe_health_care.res_partner'     
+    )
 
-  #  carrier_truck_patent = fields.Char(
-  #      'Patente de camión'
-  #  )
-
-  #  carrier_cart_patent = fields.Char(
-  #       'Patente de carro'
-  #  )
+    dimabe_health_care_description = fields.Text('Descripción de condición')

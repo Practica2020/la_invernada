@@ -1,7 +1,25 @@
 <odoo>
-    <data>
+  <data>
+    <record id="stock_picking_form_inherit" model="ir.ui.view">
+      <field name="name">Export Page</field>
+      <field name="model">health.stock.picking</field>
+      <field name="inherit_id" ref="stock.view_picking_form"/>
+      <field name="arch" type="xml">
 
-      
 
-    </data>
-  </odoo>
+        <xpath expr="//page[@name='note']" position="after">
+          <page string="Transportista" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
+            <group name="carrier_page" position="inside">
+              
+              <field name="dimabe_health_care_disease" />       
+              <field name="dimabe_health_care_description"/> 
+               <field name="dimabe_health_care_emergency_contact"/> 
+
+            </group>
+          </page>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>
