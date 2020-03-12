@@ -7,14 +7,21 @@
     'website': "http://www.example.com",
     'category': 'Uncategorized',
     'version': '12.0.1',
-    'depends': ['base', 'web'],
+    'depends': ['base'],
     'data': [
         'security/groups.xml',
         'security/ir.model.access.csv',
         'views/library_book.xml',
-        'views/templates.xml'
+        'views/library_book_categ.xml',
+        'views/library_book_rent.xml',
+        'views/library_book_rent_wizard.xml',
+        'views/library_book_return_wizard.xml',
+        'views/library_book_statistics.xml',
+        'views/res_config_settings_views.xml',
     ],
-    'qweb': [
-        'static/src/xml/qweb_template.xml'
-    ]
+    'post_init_hook': 'add_book_hook',
+    # This demo data files will be loaded if db initialize with demo data (commented becaues file is not added in this example)
+    # 'demo': [
+    #     'demo.xml'
+    # ],
 }
