@@ -84,6 +84,11 @@ class StockPicking(models.Model):
 
     medical_certification = fields.Binary(string='certificado', attachment=True)
     
+    imagen = fields.Binary(
+        string='imagen',
+    )
+    
+    
 
 
 
