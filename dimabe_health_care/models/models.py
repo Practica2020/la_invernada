@@ -2,8 +2,8 @@
 
 from odoo import models, fields, api
 
-class farmacos(models.Model):
-     _name = 'farmacos.farmacos'
+class dimabe_health_care(models.Model):
+     _name = 'dimabe_health_care.dimabe_health_care'
 
      name = fields.Char()
      value = fields.Integer()
