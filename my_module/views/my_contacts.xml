@@ -48,6 +48,11 @@
         <field name="view_id" ref="view_all_customers_form" />
         <field name="view_mode">form</field>
         <field name="sequence" eval="2"/>
+        <notebook>
+            <page string="Info">
+                <field name="line_ids"/>
+            </page>
+        </notebook>
     </record>
 
 
@@ -62,11 +67,6 @@
     </record> -->
 
 
-    <notebook>
-        <page string="Info">
-            <field name="line_ids"/>
-        </page>
-    </notebook>
 
     <menuitem id="menu_custom_top_level" name="My App menu" web_icon="my_module,static/description/icon.png"/>
     <menuitem id="menu_all_customers" parent="menu_custom_top_level" action="action_all_customers" sequence="10" />
