@@ -11,7 +11,6 @@
     <menuitem name="My Library" id="library_base_menu" />
     <menuitem name="Books" id="library_book_menu" parent="library_base_menu" action="library_book_action"/>
 
-
     <!-- Form View -->
     <record id="library_book_view_form" model="ir.ui.view">
         <field name="name">Library Book Form</field>
@@ -60,7 +59,7 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <search>
-                 <field name="name"/> 
+                <field name="name"/>
                 <field name="author_ids"/>
                 <filter string="Without Authors" name="without_author" domain="[('author_ids','=',False)]"/>
             </search>
