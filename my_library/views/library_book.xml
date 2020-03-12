@@ -60,7 +60,7 @@
         <field name="model">library.book</field>
         <field name="arch" type="xml">
             <search>
-                <!-- <field name="name"/> -->
+                 <field name="name"/> 
                 <field name="author_ids"/>
                 <filter string="Without Authors" name="without_author" domain="[('author_ids','=',False)]"/>
             </search>
