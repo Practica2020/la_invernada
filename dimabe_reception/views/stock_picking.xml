@@ -10,11 +10,11 @@
           <attribute name="domain">[('is_company', '=', True), ('supplier', '=', True)]</attribute>
         </xpath>
         <xpath expr="//field[@name='move_ids_without_package']/tree//field[@name='product_id']" position="after">
-      <!--    <field name="products_can_be_stored" invisible="1"/> -->
+      <!--    <field name="products_can_be_stored" invisible="1"/> 
         </xpath>
         <xpath expr="//field[@name='move_ids_without_package']/tree//field[@name='product_id']" position="attributes">
-        <!--  <attribute name="domain">[('type', 'in', ['product', 'consu']), ('categ_id', 'in', products_can_be_stored)]
-          </attribute> -->
+          <attribute name="domain">[('type', 'in', ['product', 'consu']), ('categ_id', 'in', products_can_be_stored)]
+          </attribute> 
         </xpath>
         <field name="picking_type_id" position="after">
           <field name="sag_code"/>
@@ -51,6 +51,7 @@
           <field name="avg_unitary_weight"
                  attrs="{'invisible':[('is_mp_reception', '=', False)]}"  />
           </field>
+          -->
 
         <xpath expr="//page[@name='note']" position="after">
           <page string="Transportista" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
