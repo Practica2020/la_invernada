@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from odoo import http
 
- class Farmacos(http.Controller):
+class Farmacos(http.Controller):
      @http.route('/farmacos/farmacos/', auth='public')
      def index(self, **kw):
          return "Hello, world"

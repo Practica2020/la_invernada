@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
- class farmacos(models.Model):
+class farmacos(models.Model):
      _name = 'farmacos.farmacos'
 
      name = fields.Char()
