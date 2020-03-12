@@ -48,12 +48,9 @@
         <field name="view_id" ref="view_all_customers_form" />
         <field name="view_mode">form</field>
         <field name="sequence" eval="2"/>
-        <notebook>
-            <page string="Info">
-                <field name="line_ids"/>
-            </page>
-        </notebook>
     </record>
+
+    <button type="action" name="%(base.action_partner_category_form)d" string="Open partner categories" />
 
 
     <!-- alternative way -->
