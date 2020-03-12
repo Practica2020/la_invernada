@@ -68,9 +68,9 @@
           <page string="Condición médica" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
             <group name="carrier_page" position="inside">
               
-              <field name="carrier_id" />       
-              <field name="carrier_truck_patent"/> 
-               <field name="carrier_cart_patent"/> 
+              <field name="medical_condition_id" />       
+              <field name="medical_condition_most_severe_disease"/> 
+               <field name="medical_condition_description"/> 
 
             </group>
           </page>
