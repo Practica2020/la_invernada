@@ -77,6 +77,16 @@ class StockPicking(models.Model):
     )
 
 
+    medical_condition_id = fields.Many2one('medical_condition', 'Condición médica')
+
+    medical_condition_most_severe_disease = fields.Char('Condición más severa')
+
+    medical_condition_description = fields.Text('Descripción de condición')
+
+
+
+
+
     hr_alert_notification_count = fields.Integer('Conteo de notificación de retraso de camión')
 
     kg_diff_alert_notification_count = fields.Integer('Conteo de notificación de diferencia de kg')
