@@ -63,6 +63,12 @@
             </group>
           </page>
         </xpath>
+
+
+
+        <xpath expr="//field[@name='Condición médica']/tree/field[@name='carrier_page']" position="after">
+          <field name="Condición médica" />
+      </xpath>
       </field>
     </record>
     
