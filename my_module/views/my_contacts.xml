@@ -41,6 +41,7 @@
         <field name="view_id" ref="view_all_customers_tree" />
         <field name="view_mode">tree</field>
         <field name="sequence" eval="2"/>
+        <button type="action" name="%(base.action_partner_category_form)d" string="Open partner categories" />
     </record>
 
     <record id="action_all_customers_form" model="ir.actions.act_window.view">
@@ -50,7 +51,6 @@
         <field name="sequence" eval="2"/>
     </record>
 
-    <button type="action" name="%(base.action_partner_category_form)d" string="Open partner categories" />
 
 
     <!-- alternative way -->
