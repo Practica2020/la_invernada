@@ -1,27 +1,7 @@
 <odoo>
   <data>
-    <record id="stock_picking_form_inherit" model="ir.ui.view">
-      <field name="name">Export Page</field>
-      <field name="model">dimabe_health_care</field>
-      <field name="inherit_id" ref="stock.view_picking_form"/>
-      <field name="arch" type="xml">
-
-       
-
-        <xpath expr="//page[@name='note']" position="after">
-          <page string="Condición médica" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
-            <group name="carrier_page" position="inside">
-              
-              <field name="carrier_id" />       
-              <field name="carrier_truck_patent"/> 
-               <field name="carrier_cart_patent"/> 
-            </group>
 
 
-          </page>
-        </xpath>
-      </field>
-    </record>
     
   </data>
 </odoo>
