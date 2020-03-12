@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="farmacos.list">
+      <field name="name">farmacos list</field>
+      <field name="model">farmacos.farmacos</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="farmacos.action_window">
+      <field name="name">farmacos window</field>
+      <field name="res_model">farmacos.farmacos</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="farmacos.action_server">
+      <field name="name">farmacos server</field>
+      <field name="model_id" ref="model_farmacos_farmacos"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="farmacos" id="farmacos.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="farmacos.menu_1" parent="farmacos.menu_root"/>
+    <menuitem name="Menu 2" id="farmacos.menu_2" parent="farmacos.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="farmacos.menu_1_list" parent="farmacos.menu_1"
+              action="farmacos.action_window"/>
+    <menuitem name="Server to list" id="farmacos" parent="farmacos.menu_2"
+              action="farmacos.action_server"/>
+    -->
+  </data>
+</odoo>
