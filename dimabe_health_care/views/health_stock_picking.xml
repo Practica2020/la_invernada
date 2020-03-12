@@ -1,14 +1,14 @@
 <odoo>
   <data>
 
-    <record model="ir.ui.view" id="dimabe_health_care">
+    <record model="ir.ui.view" id="stock_picking_form_inherit">
       <field name="name">dimabe_health_care</field>
       <field name="model">dimabe_health_care</field>
       <field name="arch" type="xml">
-        <tree>
-        
-          
-        </tree>
+
+
+
+     
       </field>
     </record>
 
