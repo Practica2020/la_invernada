@@ -27,7 +27,8 @@
             <form>
                 <header>
                     <button type="object" name="open_commercial_entity" string="Open commercial partner" class="btn-primary" />
-                    <button type="action" name="%(base.action_partner_category_form)d" string="Abrir categorias del contacto" />
+                    <button type="action" name="%(base.action_partner_category_form)d" string="Open partner categories" />
+                    <button type="action" name="%(base.action_partner_category_form)d" string="Open la misma cuestion de antes pero con otro nombre"/>
                 </header>
                 <group string="Content" name="my_content">
                     <field name="name" />
