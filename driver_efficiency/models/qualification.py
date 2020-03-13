@@ -6,7 +6,7 @@ class qualification(models.Model):
 
 
      starting_date = fields.Date(
-         string='starting_date',
+         string='Inicio de actividades',
          default=fields.Date.context_today,
      )
 
