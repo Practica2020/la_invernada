@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from odoo import models, fields, api
 
-class qualifications(models.Model):
-     _name = 'qualifications.'
+class qualification(models.Model):
+     _name = 'qualification'
 
 
      starting_date = fields.Date(
