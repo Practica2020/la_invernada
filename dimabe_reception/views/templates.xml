@@ -1,14 +1,5 @@
 <odoo>
     <data>
-        <template id="my_custom_assets" name="My Custom Assets">
-    
-            
-            <xpath expr="note" position="inside">
-                <link rel="stylesheet" type="text/css"
-                href="/dimabe_reception/static/src/scss/todo.css"/>
-                </xpath>
-            </template>
-
         <!-- <template id="listing"> -->
         <!--   <ul> -->
         <!--     <li t-foreach="objects" t-as="object"> -->
