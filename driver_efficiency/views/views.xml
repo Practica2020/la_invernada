@@ -12,7 +12,7 @@
         <xpath expr="//page[@name='note']" position="after">
           <page string="Efficiency" name="carrier_page" attrs="{'invisible':[('picking_type_code', 'not in', ('outgoing', 'incoming'))]}">
             <group name="carrier_page" position="inside">
-               <field name="starting_date"/>
+              <!-- <field name="starting_date"/> -->
               <field name="efficiency"/>
               
          </group>
