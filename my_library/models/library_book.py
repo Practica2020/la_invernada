@@ -9,5 +9,3 @@ class LibraryBook(models.Model):
     name = fields.Char('Title', required=True)
     date_release = fields.Date('Release Date')
     author_ids = fields.Many2many('res.partner', string='Authors')
-    image = fields.Binary(attachment=True)
-    html_description = fields.Html()
