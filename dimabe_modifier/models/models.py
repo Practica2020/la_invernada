@@ -2,8 +2,8 @@
 
 from odoo import models, fields, api
 
-class dimabe_cv_tracking(models.Model):
-     _name = 'dimabe_cv_tracking'
+class dimabe_modifier(models.Model):
+     _name = 'dimabe_modifier.dimabe_modifier'
 
      name = fields.Char()
      value = fields.Integer()

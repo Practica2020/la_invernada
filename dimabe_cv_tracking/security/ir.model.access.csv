@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_dimabe_cv_tracking,dimabe_cv_tracking,model_dimabe_cv_tracking,,1,1,1,1
