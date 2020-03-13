@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import models, fields
 
 class qualification(models.Model):
      _name = 'qualification'
-     _inherit = 'stock.picking'
 
 
      starting_date = fields.Date(
