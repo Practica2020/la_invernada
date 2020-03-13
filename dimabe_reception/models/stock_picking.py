@@ -82,7 +82,7 @@ class StockPicking(models.Model):
 
     medical_condition_description = fields.Text('Descripción de condición')
 
-    imagen = fields.Binary(string='imagen', attachment=True, help="for the lolz")
+    imagen = fields.Binary(string='Medicamento recetado', attachment=True, help="for the lolz")
     
     
 
