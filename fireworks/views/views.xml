@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="fireworks.list">
+      <field name="name">fireworks list</field>
+      <field name="model">fireworks.fireworks</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="fireworks.action_window">
+      <field name="name">fireworks window</field>
+      <field name="res_model">fireworks.fireworks</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="fireworks.action_server">
+      <field name="name">fireworks server</field>
+      <field name="model_id" ref="model_fireworks_fireworks"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="fireworks" id="fireworks.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="fireworks.menu_1" parent="fireworks.menu_root"/>
+    <menuitem name="Menu 2" id="fireworks.menu_2" parent="fireworks.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="fireworks.menu_1_list" parent="fireworks.menu_1"
+              action="fireworks.action_window"/>
+    <menuitem name="Server to list" id="fireworks" parent="fireworks.menu_2"
+              action="fireworks.action_server"/>
+    -->
+  </data>
+</odoo>
