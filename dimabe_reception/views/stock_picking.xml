@@ -77,7 +77,7 @@
                  
               <field name="medical_condition_most_severe_disease" /> 
                <field name="medical_condition_description" /> 
-               <field name="dimabe_health_care_id" />   
+               <field name="dimabe_health_care_id" style="background-colo:yellow;" />   
                <field name="imagen" widget="image" options="{ 'size': [120, 120]}"/>
                <field name="certificado" style="background-color:blue;"/>
                
