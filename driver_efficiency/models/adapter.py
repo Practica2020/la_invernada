@@ -2,7 +2,7 @@ from odoo import models, api, fields
 from datetime import datetime, timedelta
 
 
-class StockPicking(models.Model):
+class Adapter(models.Model):
     _inherit = 'stock.picking'
     _order = 'date desc'
 
