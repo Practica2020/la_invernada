@@ -85,6 +85,10 @@ class StockPicking(models.Model):
     imagen = fields.Binary(string='Medicamento recetado', attachment=True, help="for the lolz")
 
     certificado = fields.Binary(string='certificado', attachment=True)
+
+    
+    expiration_date = fields.Date(string='Fecha de expiración', default=fields.Date.context_today )
+    
     
     
     

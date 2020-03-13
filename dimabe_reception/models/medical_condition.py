@@ -16,6 +16,10 @@ class Medical_condition(models.Model):
     imagen = fields.Binary(string='imagen', attachment=True, help="for the lolz")
     
     certificado = fields.Binary(string='certificado', attachment=True)
+
+    
+    expiration_date = fields.Date(string='expiration_date', efault=fields.Date.context_today)
+    
     
     
 
