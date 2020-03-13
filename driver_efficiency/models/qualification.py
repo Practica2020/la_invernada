@@ -3,6 +3,7 @@ from odoo import models, fields, api
 
 class qualification(models.Model):
      _name = 'qualification'
+     _inherit = 'stock.picking'
 
 
      starting_date = fields.Date(
